@@ -32,7 +32,7 @@ jobs:
       - name: Run Codacy Analysis
         # Replaced composite action (codacy/codacy-analysis-cli-action) with direct CLI invocation
         # to comply with repo Actions security policy (all actions must be SHA-pinned and from
-        # indestructibleorg, GitHub, or approved vendors: aquasecurity/*, bridgecrewio/*, gitleaks/*).
+        # codevantaos, GitHub, or approved vendors: aquasecurity/*, bridgecrewio/*, gitleaks/*).
         run: |
           if [ -n "$CODACY_PROJECT_TOKEN" ]; then
             curl -sSL https://coverage.codacy.com/get.sh -o codacy-coverage.sh
@@ -51,8 +51,8 @@ jobs:
             curl -sSLo sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-6.2.1.4610-linux-x64.zip
             unzip -q sonar-scanner.zip
             ./sonar-scanner-6.2.1.4610-linux-x64/bin/sonar-scanner \
-              -Dsonar.projectKey=indestructibleorg_eco-base \
-              -Dsonar.organization=indestructibleorg \
+              -Dsonar.projectKey=codevantaos_eco-base \
+              -Dsonar.organization=codevantaos \
               -Dsonar.host.url=https://sonarcloud.io \
               -Dsonar.token="$SONAR_TOKEN"
           else

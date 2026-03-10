@@ -80,7 +80,7 @@ jobs:
       - name: Commit drill-summary.json only
         if: always()
         run: |
-          git config user.email "chaos-drill[bot]@indestructiblemachinen.com"
+          git config user.email "chaos-drill[bot]@codevantaosmachinen.com"
           git config user.name "chaos-drill[bot]"
           git add tests/reports/drill-summary.json || true
           git diff --cached --quiet || git commit -m "chore(drill): update drill-summary.json [skip ci]"
@@ -157,7 +157,7 @@ jobs:
       - name: Commit drill-summary.json only
         if: always()
         run: |
-          git config user.email "chaos-drill[bot]@indestructiblemachinen.com"
+          git config user.email "chaos-drill[bot]@codevantaosmachinen.com"
           git config user.name "chaos-drill[bot]"
           git add tests/reports/drill-summary.json || true
           git diff --cached --quiet || git commit -m "chore(drill): update drill-summary.json [skip ci]"

@@ -155,7 +155,7 @@ jobs:
 
       - name: Verify no unapproved registries in platform manifests
         run: |
-          APPROVED_REGISTRIES="ghcr.io/indestructibleorg gcr.io/my-project-ops-1991 quay.io docker.io/library"
+          APPROVED_REGISTRIES="ghcr.io/codevantaos gcr.io/my-project-ops-1991 quay.io docker.io/library"
           VIOLATIONS=0
 
           for f in $(find platforms/ -name "*.yaml" 2>/dev/null); do
